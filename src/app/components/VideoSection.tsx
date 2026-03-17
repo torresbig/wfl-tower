@@ -1,0 +1,35 @@
+import { motion } from "motion/react";
+
+export function VideoSection() {
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="py-20 px-4 bg-red-600"
+    >
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+          Erlebe die Atmosphäre
+        </h2>
+        <div className="relative rounded-xl overflow-hidden shadow-2xl">
+          <div className="aspect-video bg-black flex items-center justify-center">
+            <video
+              controls
+              className="w-full h-full"
+              poster="/video/thumbnail.jpg"
+            >
+              <source src="/video/team-video.mp4" type="video/mp4" />
+              <source src="/video/team-video.webm" type="video/webm" />
+              Dein Browser unterstützt das Video-Tag nicht.
+            </video>
+          </div>
+        </div>
+        <p className="text-center mt-6 text-white/80 italic">
+          Video aus deinem GitHub Ordner: /video/
+        </p>
+      </div>
+    </motion.section>
+  );
+}
