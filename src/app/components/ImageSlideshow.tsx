@@ -2,19 +2,18 @@ import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 
 // Platzhalter-Bilder (sollen in src/assets/bilder/slide/ liegen)
+import team1 from "../../assets/bilder/slide/team1.jpg";
+import team2 from "../../assets/bilder/slide/team2.jpg";
 import team3 from "../../assets/bilder/slide/team3.jpg";
+import team4 from "../../assets/bilder/slide/team4.jpg";
+import team5 from "../../assets/bilder/slide/team5.jpg";
 
 const SLIDESHOW_IMAGES = [
+  team1,
+  team2,
   team3,
-  // If you add real image files, add them here:
-  // import team1 from "../../assets/bilder/slide/team1.jpg";
-  // import team2 from "../../assets/bilder/slide/team2.jpg";
-  // import team4 from "../../assets/bilder/slide/team4.jpg";
-  // import team5 from "../../assets/bilder/slide/team5.jpg";
-  // team1,
-  // team2,
-  // team4,
-  // team5,
+  team4,
+  team5,
 ];
 
 export function ImageSlideshow() {

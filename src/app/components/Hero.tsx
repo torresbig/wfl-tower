@@ -1,4 +1,16 @@
+import { useState, useEffect } from "react";
+
 export function Hero() {
+  const [daysUntilStart, setDaysUntilStart] = useState(0);
+
+  useEffect(() => {
+    const targetDate = new Date('2026-05-10');
+    const today = new Date();
+    const diffTime = targetDate.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    setDaysUntilStart(diffDays);
+  }, []);
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#003056] to-[#002040] text-white px-4">
       <div className="text-center mb-8">
@@ -9,6 +21,13 @@ export function Hero() {
             className="h-24 md:h-32 mx-auto"
           />
         </div>
+
+        {/* Datum zwischen Logo und Team-Name */}
+        <div className="mb-4">
+          <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">10.05.2026 • 13:00 Uhr</p>
+          <p className="text-lg md:text-xl text-white/90">{daysUntilStart} Tage bis zum Start!</p>
+        </div>
+
         <h1 className="text-5xl md:text-7xl font-bold mb-4">Tower & Friends</h1>
         <p className="text-xl md:text-2xl opacity-90">Gemeinsam laufen für die Heilung von Querschnittlähmung</p>
       </div>
