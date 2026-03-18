@@ -1,6 +1,35 @@
+import { useEffect, useRef } from "react";
 import teamVideo from "../../assets/video/team-video.mp4";
 
 export function VideoSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch((error) => {
+              console.log("Video autoplay failed:", error);
+            });
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% des Videos muss sichtbar sein
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section className="py-20 px-4 bg-red-600">
       <div className="max-w-5xl mx-auto">
@@ -10,7 +39,9 @@ export function VideoSection() {
         <div className="relative rounded-xl overflow-hidden shadow-2xl">
           <div className="aspect-video bg-black flex items-center justify-center">
             <video
-              controls
+              ref={videoRef}
+              muted // Autoplay erfordert muted
+              loop
               className="w-full h-full"
             >
               <source src={teamVideo} type="video/mp4" />

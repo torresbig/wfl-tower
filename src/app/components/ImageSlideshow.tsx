@@ -9,8 +9,8 @@ import team4 from "../../assets/bilder/slide/team4.jpg";
 import team5 from "../../assets/bilder/slide/team5.jpg";
 
 const SLIDESHOW_IMAGES = [
-  team1,
-  team2,
+  // team1, // Platzhalter - entfernt
+  // team2, // Platzhalter - entfernt
   team3,
   team4,
   team5,

@@ -32,10 +32,10 @@ export function Hero() {
         <p className="text-xl md:text-2xl opacity-90">Gemeinsam laufen für die Heilung von Querschnittlähmung</p>
       </div>
 
-      {/* Datum Banner ganz oben */}
-      <div className="absolute top-8 bg-[#E2004C] px-8 py-3 rounded-full shadow-lg">
+      {/* Datum Banner ganz oben - entfernt */}
+      {/* <div className="absolute top-8 bg-[#E2004C] px-8 py-3 rounded-full shadow-lg">
         <p className="font-bold text-lg md:text-xl">10.05.2026 • 13:00 Uhr</p>
-      </div>
+      </div> */}
 
       <div className="mt-8">
         <a
