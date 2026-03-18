@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-6">
           <img
-            src="https://www.wingsforlifeworldrun.com/fileadmin/images/Logo/WFLWR_Logo_2025.svg"
+            src="https://img.redbull.com/images/e_trim:10:transparent/bo_5px_solid_rgb:00000000/q_auto,f_png/redbullcom/2014/04/29/1331648035613_4/wings-for-life-world-run-logo-large"
             alt="Wings for Life World Run"
             className="h-16 mx-auto mb-6 opacity-80"
           />
