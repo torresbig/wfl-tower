@@ -1,19 +1,7 @@
-import { motion } from "motion/react";
-
 export function Hero() {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#003056] to-[#002040] text-white px-4"
-    >
-      <motion.div
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-center mb-8"
-      >
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#003056] to-[#002040] text-white px-4">
+      <div className="text-center mb-8">
         <div className="mb-6">
           <img
             src="https://img.redbull.com/images/e_trim:10:transparent/bo_5px_solid_rgb:00000000/q_auto,f_png/redbullcom/2014/04/29/1331648035613_4/wings-for-life-world-run-logo-large"
@@ -23,26 +11,14 @@ export function Hero() {
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-4">Tower & Friends</h1>
         <p className="text-xl md:text-2xl opacity-90">Gemeinsam laufen für die Heilung von Querschnittlähmung</p>
-      </motion.div>
+      </div>
 
-
-       {/* Datum Banner ganz oben */}
-      <motion.div
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="absolute top-8 bg-[#E2004C] px-8 py-3 rounded-full shadow-lg"
-      >
+      {/* Datum Banner ganz oben */}
+      <div className="absolute top-8 bg-[#E2004C] px-8 py-3 rounded-full shadow-lg">
         <p className="font-bold text-lg md:text-xl">10.05.2026 • 13:00 Uhr</p>
-      </motion.div>
+      </div>
 
-      
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 0.8, type: "spring", stiffness: 100 }}
-        className="mt-8"
-      >
+      <div className="mt-8">
         <a
           href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
           target="_blank"
@@ -51,14 +27,9 @@ export function Hero() {
         >
           Jetzt dem Team beitreten! 🏃‍♂️
         </a>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8"
-      >
+      <div className="absolute bottom-8">
         <div className="animate-bounce">
           <svg
             className="w-8 h-8 text-white"
@@ -72,7 +43,7 @@ export function Hero() {
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
-      </motion.div>
-    </motion.section>
+      </div>
+    </section>
   );
 }

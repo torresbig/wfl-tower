@@ -1,30 +1,17 @@
-import { motion } from "motion/react";
 import { Users, MapPin, Calendar, PartyPopper } from "lucide-react";
 
 export function StorySection() {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#003056]">
             Die Geschichte von Tower & Friends
           </h2>
           <div className="w-24 h-1 bg-[#E2004C] mx-auto mb-8"></div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12"
-        >
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl leading-relaxed text-gray-700 mb-6">
               <strong className="text-[#E2004C]">Hallo, ich bin Thomas</strong> – seit 2015 durch einen Motorradunfall querschnittgelähmt. 
@@ -47,16 +34,10 @@ export function StorySection() {
               Das ist nicht nur ein Lauf – das ist Hoffnung in Bewegung.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Unser Treffpunkt */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="bg-gradient-to-br from-[#003056] to-[#002040] rounded-2xl shadow-xl p-8 md:p-12 text-white mb-12"
-        >
+        <div className="bg-gradient-to-br from-[#003056] to-[#002040] rounded-2xl shadow-xl p-8 md:p-12 text-white mb-12">
           <div className="flex items-center mb-6">
             <MapPin className="w-10 h-10 mr-4" />
             <h3 className="text-3xl font-bold">Unser Treffpunkt</h3>
@@ -78,16 +59,10 @@ export function StorySection() {
               So bleiben wir alle zusammen und können anschließend gemeinsam durchatmen, quatschen und snacken!
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* After Party */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
-        >
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
           <div className="flex items-center mb-6">
             <PartyPopper className="w-10 h-10 mr-4 text-[#E2004C]" />
             <h3 className="text-3xl font-bold text-[#003056]">After-Run Celebration 2025</h3>
@@ -105,7 +80,7 @@ export function StorySection() {
               🎒 Bring gerne was mit, wenn du kannst – gemeinsam schmeckt's besser!
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import Slider from "react-slick";
-import { motion } from "motion/react";
 
 // Platzhalter-Bilder - Diese werden durch die echten Bilder aus dem GitHub Ordner bilder/slide ersetzt
 // import team1 from '../../../assets/bilder/slide/team1.jpg';
@@ -31,13 +30,7 @@ export function ImageSlideshow() {
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="py-20 px-4 bg-white"
-    >
+    <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">
           Unser Team in Action
@@ -91,6 +84,6 @@ export function ImageSlideshow() {
           color: #dc2626;
         }
       `}</style>
-    </motion.section>
+    </section>
   );
 }

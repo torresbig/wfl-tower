@@ -2,13 +2,7 @@
 
 export function VideoSection() {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="py-20 px-4 bg-red-600"
-    >
+    <section className="py-20 px-4 bg-red-600">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
           Erlebe die Atmosphäre
@@ -29,6 +23,6 @@ export function VideoSection() {
           Video aus deinem GitHub Ordner: /video/
         </p>
       </div>
-    </motion.section>
+    </section>
   );
 }
