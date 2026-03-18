@@ -57,11 +57,11 @@ export function ImageSlideshow() {
             ) : (
               slides.map((image, index) => (
                 <div key={index} className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center min-h-[350px]">
                     <img
                       src={image}
                       alt={`Team Bild ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="max-h-[65vh] w-full max-w-full object-contain"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = "none";

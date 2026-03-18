@@ -15,6 +15,9 @@ export default function App() {
       {/* Slideshow */}
       <ImageSlideshow />
 
+      {/* Thomas' Geschichte direkt unter der Slideshow */}
+      <StorySection />
+
       {/* CTA - Erste Einladung */}
       <CTASection variant="secondary" />
 
@@ -26,9 +29,6 @@ export default function App() {
 
       {/* CTA - Zweite Einladung */}
       <CTASection variant="secondary" />
-
-      {/* Thomas' Geschichte */}
-      <StorySection />
 
       {/* Haupt-CTA - Finale Einladung */}
       <CTASection variant="primary" />
