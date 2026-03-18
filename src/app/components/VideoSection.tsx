@@ -19,8 +19,8 @@ export function VideoSection() {
               controls
               className="w-full h-full"
             >
-              <source src="/video/team-video.mp4" type="video/mp4" />
-              <source src="/video/team-video.webm" type="video/webm" />
+              <source src={`${import.meta.env.BASE_URL}video/team-video.mp4`} type="video/mp4" />
+              <source src={`${import.meta.env.BASE_URL}video/team-video.webm`} type="video/webm" />
               Dein Browser unterstützt das Video-Tag nicht.
             </video>
           </div>

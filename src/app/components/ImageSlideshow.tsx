@@ -3,12 +3,14 @@ import Slider from "react-slick";
 import { motion } from "motion/react";
 
 // Platzhalter-Bilder - Diese werden durch die echten Bilder aus dem GitHub Ordner bilder/slide ersetzt
+const BASE = import.meta.env.BASE_URL;
+
 const SLIDESHOW_IMAGES = [
-  "/bilder/slide/team1.jpg",
-  "/bilder/slide/team2.jpg",
-  "/bilder/slide/team3.jpg",
-  "/bilder/slide/team4.jpg",
-  "/bilder/slide/team5.jpg",
+  `${BASE}bilder/slide/team1.jpg`,
+  `${BASE}bilder/slide/team2.jpg`,
+  `${BASE}bilder/slide/team3.jpg`,
+  `${BASE}bilder/slide/team4.jpg`,
+  `${BASE}bilder/slide/team5.jpg`,
 ];
 
 export function ImageSlideshow() {
