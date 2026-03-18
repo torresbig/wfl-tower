@@ -3,14 +3,15 @@ import Slider from "react-slick";
 import { motion } from "motion/react";
 
 // Platzhalter-Bilder - Diese werden durch die echten Bilder aus dem GitHub Ordner bilder/slide ersetzt
-import team1 from '../../../assets/bilder/slide/team1.jpg';
-import team2 from '../../../assets/bilder/slide/team2.jpg';
-import team3 from '../../../assets/bilder/slide/team3.jpg';
+// import team1 from '../../../assets/bilder/slide/team1.jpg';
+// import team2 from '../../../assets/bilder/slide/team2.jpg';
+// import team3 from '../../../assets/bilder/slide/team3.jpg';
 
 const SLIDESHOW_IMAGES = [
-  team1,
-  team2,
-  team3,
+  // team1,
+  // team2,
+  // team3,
+  // Temporär leer, bis Dateien hinzugefügt sind
 ];
 
 export function ImageSlideshow() {
