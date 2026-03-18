@@ -8,7 +8,25 @@ export function Hero() {
       transition={{ duration: 1 }}
       className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#003056] to-[#002040] text-white px-4"
     >
-      {/* Datum Banner ganz oben */}
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="text-center mb-8"
+      >
+        <div className="mb-6">
+          <img
+            src="https://img.redbull.com/images/e_trim:10:transparent/bo_5px_solid_rgb:00000000/q_auto,f_png/redbullcom/2014/04/29/1331648035613_4/wings-for-life-world-run-logo-large"
+            alt="Wings for Life World Run"
+            className="h-24 md:h-32 mx-auto"
+          />
+        </div>
+        <h1 className="text-5xl md:text-7xl font-bold mb-4">Tower & Friends</h1>
+        <p className="text-xl md:text-2xl opacity-90">Gemeinsam laufen für die Heilung von Querschnittlähmung</p>
+      </motion.div>
+
+
+       {/* Datum Banner ganz oben */}
       <motion.div
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -18,23 +36,7 @@ export function Hero() {
         <p className="font-bold text-lg md:text-xl">10.05.2026 • 13:00 Uhr</p>
       </motion.div>
 
-      <motion.div
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-center mb-8"
-      >
-        <div className="mb-6">
-          <img
-            src="https://www.wingsforlifeworldrun.com/fileadmin/images/Logo/WFLWR_Logo_2025.svg"
-            alt="Wings for Life World Run"
-            className="h-24 md:h-32 mx-auto"
-          />
-        </div>
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">Tower & Friends</h1>
-        <p className="text-xl md:text-2xl opacity-90">Gemeinsam laufen für die Forschung</p>
-      </motion.div>
-
+      
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
