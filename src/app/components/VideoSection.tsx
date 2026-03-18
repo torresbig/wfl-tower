@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import teamVideo from '../../../assets/video/team-video.mp4';
 
 export function VideoSection() {
   return (
@@ -19,8 +19,8 @@ export function VideoSection() {
               controls
               className="w-full h-full"
             >
-              <source src={`${import.meta.env.BASE_URL}video/team-video.mp4`} type="video/mp4" />
-              <source src={`${import.meta.env.BASE_URL}video/team-video.webm`} type="video/webm" />
+              <source src={teamVideo} type="video/mp4" />
+              <source src={teamVideo.replace('.mp4', '.webm')} type="video/webm" />
               Dein Browser unterstützt das Video-Tag nicht.
             </video>
           </div>
