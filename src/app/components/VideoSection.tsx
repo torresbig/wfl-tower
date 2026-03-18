@@ -18,7 +18,7 @@ export function VideoSection() {
             <video
               controls
               className="w-full h-full"
-              poster="/video/thumbnail.jpg"
+              poster="/public/video/thumbnail.jpg"
             >
               <source src="/video/team-video.mp4" type="video/mp4" />
               <source src="/video/team-video.webm" type="video/webm" />
