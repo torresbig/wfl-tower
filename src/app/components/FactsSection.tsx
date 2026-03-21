@@ -31,6 +31,11 @@ const facts = [
     title: "Unser Impact 2025",
     description: "55 aktive Läufer (über 100 Mitglieder) und über 3.000 € Spenden - gemeinsam sind wir stark!",
   },
+  {
+    icon: Target,
+    title: "privates Event",
+    description: "Jeder Teilnehmer nimmt auf eigene Gefahr am \" Wings for Life World Run\" teil. Unser Team trifft sich nur, um privat zusammen zu laufen und Spaß zu haben. Dies ist kein offizielles Event!",
+  },
 ];
 
 export function FactsSection() {
