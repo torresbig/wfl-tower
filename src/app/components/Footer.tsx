@@ -16,7 +16,7 @@ export function Footer() {
         
         <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
           Gemeinsam laufen wir für eine Welt ohne Querschnittlähmung.
-          100% der Spenden fließen in die Forschung.
+          100% der Spenden und Startgelder fließen in die Forschung.
         </p>
 
         <div className="flex justify-center items-center space-x-2 mb-8">
