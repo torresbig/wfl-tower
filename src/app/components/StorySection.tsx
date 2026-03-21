@@ -48,6 +48,26 @@ export function StorySection() {
             Hier starten wir gemeinsam unseren fantastischen Lauf!
           </p>
 
+            <div className="mt-8">
+    <h4 className="text-white font-bold mb-4">Hier findest du uns:</h4>
+    <div className="rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl">
+      <iframe
+        width="100%"
+        height="350"
+        src="https://maps.google.com/maps?q=49.9783951,7.5110275&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        className="grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+      ></iframe>
+    </div>
+    <a 
+      href="https://www.google.com/maps/dir/?api=1&destination=49.9783951,7.5110275"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block mt-4 text-[#E2004C] hover:underline font-medium"
+    >
+      → Route mit Google Maps planen
+    </a>
+  </div>
+
           <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
             <h4 className="text-xl font-bold mb-4 flex items-center">
               <Calendar className="w-6 h-6 mr-3" />
