@@ -12,20 +12,23 @@ export default function App() {
       {/* Hero Section mit Logo und Team Name */}
       <Hero />
 
-      {/* Slideshow */}
-      <ImageSlideshow />
+      {/* Video Section */}
+      <VideoSection variant="whatis"/>
 
       {/* Thomas' Geschichte direkt unter der Slideshow */}
       <StorySection />
 
-      {/* CTA - Erste Einladung */}
-      <CTASection variant="secondary" />
+      {/* Slideshow */}
+      <ImageSlideshow />
 
       {/* Fakten zu Wings for Life */}
       <FactsSection />
 
+      {/* CTA - Erste Einladung */}
+      <CTASection variant="secondary" />
+
       {/* Video Section */}
-      <VideoSection />
+      <VideoSection variant="mission"/>
 
       {/* CTA - Zweite Einladung */}
       <CTASection variant="secondary" />

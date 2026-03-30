@@ -3,9 +3,11 @@ import teamVideo from "../../assets/video/team-video.mp4";
 import whatisVideo from "../../assets/video/whatis.mp4";
 import missionVideo from "../../assets/video/mission.mp4";
 
+interface CTASectionProps {
+  variant?: "whatis" | "mission";
+}
 
-
-export function VideoSection() {
+export function VideoSection({ variant }: CTASectionProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -33,27 +35,27 @@ export function VideoSection() {
       observer.disconnect();
     };
   }, []);
-
-  return (
-    <section className="py-20 px-4 bg-red-600">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-          Was ist der Wings for Life World Run?
-        </h2>
-        <div className="relative rounded-xl overflow-hidden shadow-2xl">
-          <div className="aspect-video bg-black flex items-center justify-center">
-            <video
-              ref={videoRef}
-              controls
-              loop
-              className="w-full h-full"
-            >
-              <source src={whatisVideo} type="video/mp4" />
-              Dein Browser unterstützt das Video-Tag nicht.
-            </video>
+  if (variant === "whatis") {
+    return (
+      <section className="py-20 px-4 bg-red-600">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            Was ist der Wings for Life World Run?
+          </h2>
+          <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <div className="aspect-video bg-black flex items-center justify-center">
+              <video
+                ref={videoRef}
+                controls
+                loop
+                className="w-full h-full"
+              >
+                <source src={whatisVideo} type="video/mp4" />
+                Dein Browser unterstützt das Video-Tag nicht.
+              </video>
+            </div>
           </div>
-        </div>
-        <p className="text-lg text-center mt-4 text-white">
+          <p className="text-lg text-center mt-4 text-white">
             Video von Wings for Life --{" "}
             <a
               href="https://www.wingsforlifeworldrun.com/de/race-format"
@@ -64,25 +66,31 @@ export function VideoSection() {
               https://www.wingsforlifeworldrun.com/de/race-format
             </a>
           </p>
-      </div>
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-          Die Mission von Wings for Life
-        </h2>
-        <div className="relative rounded-xl overflow-hidden shadow-2xl">
-          <div className="aspect-video bg-black flex items-center justify-center">
-            <video
-              ref={videoRef}
-              controls
-              loop
-              className="w-full h-full"
-            >
-              <source src={missionVideo} type="video/mp4" />
-              Dein Browser unterstützt das Video-Tag nicht.
-            </video>
-          </div>
         </div>
-         <p className="text-lg text-center mt-4 text-white">
+      </section>
+    );
+  }
+  else  {
+    return (
+      <section className="py-20 px-4 bg-red-600">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            Die Mission von Wings for Life
+          </h2>
+          <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <div className="aspect-video bg-black flex items-center justify-center">
+              <video
+                ref={videoRef}
+                controls
+                loop
+                className="w-full h-full"
+              >
+                <source src={missionVideo} type="video/mp4" />
+                Dein Browser unterstützt das Video-Tag nicht.
+              </video>
+            </div>
+          </div>
+          <p className="text-lg text-center mt-4 text-white">
             Video von Wings for Life --{" "}
             <a
               href="https://www.wingsforlifeworldrun.com/de/mission"
@@ -93,7 +101,8 @@ export function VideoSection() {
               https://www.wingsforlifeworldrun.com/de/mission
             </a>
           </p>
-      </div>
-    </section>
-  );
+        </div>
+      </section>
+    );
+  }
 }
