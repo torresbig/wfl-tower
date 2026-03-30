@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import teamVideo from "../../assets/video/team-video.mp4";
 import whatisVideo from "../../assets/video/whatis.mp4";
 import missionVideo from "../../assets/video/mission.mp4";
+
 
 
 export function VideoSection() {
@@ -55,14 +55,14 @@ export function VideoSection() {
         </div>
         <p className="text-lg text-center mt-4 text-white">
             Video von Wings for Life --{" "}
-            <Link
+            <a
               href="https://www.wingsforlifeworldrun.com/de/race-format"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-300 hover:text-blue-100"
             >
               https://www.wingsforlifeworldrun.com/de/race-format
-            </Link>
+            </a>
           </p>
       </div>
       <div className="max-w-5xl mx-auto">
@@ -84,14 +84,14 @@ export function VideoSection() {
         </div>
          <p className="text-lg text-center mt-4 text-white">
             Video von Wings for Life --{" "}
-            <Link
+            <a
               href="https://www.wingsforlifeworldrun.com/de/mission"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-300 hover:text-blue-100"
             >
               https://www.wingsforlifeworldrun.com/de/mission
-            </Link>
+            </a>
           </p>
       </div>
     </section>
