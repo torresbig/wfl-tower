@@ -51,6 +51,11 @@ export function VideoSection() {
             </video>
           </div>
         </div>
+        <h3 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+          Video von Wings for Life -- <Link href="https://www.wingsforlifeworldrun.com/de/race-format" target="_blank" rel="noopener noreferrer">
+            https://www.wingsforlifeworldrun.com/de/race-format
+          </Link>
+        </h3>
       </div>
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
@@ -69,6 +74,11 @@ export function VideoSection() {
             </video>
           </div>
         </div>
+         <h3 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+          Video von Wings for Life -- <Link href="https://www.wingsforlifeworldrun.com/de/mission" target="_blank" rel="noopener noreferrer">
+            https://www.wingsforlifeworldrun.com/de/mission
+          </Link>
+        </h3>
       </div>
     </section>
   );
