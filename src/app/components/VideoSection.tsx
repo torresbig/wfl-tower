@@ -1,35 +1,42 @@
 import { useEffect, useRef } from "react";
-import Link from "next/link"; // Import für Link hinzugefügt, um den ReferenceError zu beheben
-import teamVideo from "../../assets/video/team-video.mp4";
+import Link from "next/link";
 import whatisVideo from "../../assets/video/whatis.mp4";
 import missionVideo from "../../assets/video/mission.mp4";
 
 export function VideoSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const whatisVideoRef = useRef<HTMLVideoElement>(null);
+  const missionVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const setupObserver = (video: HTMLVideoElement | null) => {
+      if (!video) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play().catch((error) => {
-              console.log("Video autoplay failed:", error);
-            });
-          } else {
-            video.pause();
-          }
-        });
-      },
-      { threshold: 0.5 } // 50% des Videos muss sichtbar sein
-    );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              video.play().catch((error) => {
+                console.log("Video autoplay failed:", error);
+              });
+            } else {
+              video.pause();
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
 
-    observer.observe(video);
+      observer.observe(video);
+
+      return () => observer.disconnect();
+    };
+
+    const cleanupWhatis = setupObserver(whatisVideoRef.current);
+    const cleanupMission = setupObserver(missionVideoRef.current);
 
     return () => {
-      observer.disconnect();
+      cleanupWhatis?.();
+      cleanupMission?.();
     };
   }, []);
 
@@ -43,7 +50,7 @@ export function VideoSection() {
           <div className="relative rounded-xl overflow-hidden shadow-2xl">
             <div className="aspect-video bg-black flex items-center justify-center">
               <video
-                ref={videoRef}
+                ref={whatisVideoRef}
                 controls
                 loop
                 className="w-full h-full"
@@ -75,7 +82,7 @@ export function VideoSection() {
           <div className="relative rounded-xl overflow-hidden shadow-2xl">
             <div className="aspect-video bg-black flex items-center justify-center">
               <video
-                ref={videoRef}
+                ref={missionVideoRef}
                 controls
                 loop
                 className="w-full h-full"
