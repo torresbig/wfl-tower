@@ -1,43 +1,97 @@
 import { useState, useEffect } from "react";
+import { Instagram } from "lucide-react";
+
+const rotatingMessages = [
+  {
+    id: 1,
+    content: "Apprun: Jeder kann von überall auf der Welt teilnehmen. Man muss nicht vor Ort sein.",
+  },
+  {
+    id: 2,
+    content: "Mehr Einblicke und Infos auf Instagram",
+    link: "https://www.instagram.com/thomas_sborn/",
+    label: "@thomas_sborn",
+  },
+  {
+    id: 3,
+    content: "Laufen für die, die es nicht können",
+  },
+  {
+    id: 4,
+    content: "Gemeinsam nehmen wir am \"Wings for life World Run\" teil und laufen für die Heilung von Querschnittlähmung",
+  },
+  {
+    id: 5,
+    content: "Tu was Gutes und sei dabei.",
+  },
+  {
+    id: 6,
+    content: "100% der Startgebühr und Spenden gehen in die Forschung.",
+  },
+];
 
 export function Hero() {
   const [daysUntilStart, setDaysUntilStart] = useState(0);
+  const [activeTextIndex, setActiveTextIndex] = useState(0);
 
   useEffect(() => {
-    const targetDate = new Date('2026-05-10');
+    const targetDate = new Date("2026-05-10");
     const today = new Date();
     const diffTime = targetDate.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     setDaysUntilStart(diffDays);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTextIndex((current: number) => (current + 1) % rotatingMessages.length);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const activeMessage = rotatingMessages[activeTextIndex];
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#003056] to-[#002040] text-white px-4">
-      <div className="text-center mb-8">
+    <section className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-[#003056] to-[#002040] text-white px-4 pt-16 pb-12">
+      <div className="w-full max-w-5xl text-center">
         <div className="mb-6">
           <img
             src="https://img.redbull.com/images/e_trim:10:transparent/bo_5px_solid_rgb:00000000/q_auto,f_png/redbullcom/2014/04/29/1331648035613_4/wings-for-life-world-run-logo-large"
             alt="Wings for Life World Run"
-            className="h-24 md:h-32 mx-auto"
+            className="h-20 md:h-28 mx-auto"
           />
         </div>
 
-        {/* Datum zwischen Logo und Team-Name */}
         <div className="mb-4">
           <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">10.05.2026 • 13:00 Uhr</p>
-          <p className="text-lg md:text-xl text-white/90">{daysUntilStart} Tage bis zum Start!</p>
+          <p className="text-base md:text-lg text-white/90">{daysUntilStart} Tage bis zum Start!</p>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">Tower & Friends</h1>
-        <p className="text-xl md:text-2xl opacity-90">Gemeinsam nehmen wir am "Wings for life World Run" teil und laufen für die Heilung von Querschnittlähmung</p>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Tower & Friends</h1>
+
+        <div className="mx-auto mb-8 max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-sm transition-all duration-700">
+          <p className="text-base sm:text-lg md:text-xl leading-8 text-white/90">
+            {activeMessage.link ? (
+              <>
+                {activeMessage.content} <a
+                  href={activeMessage.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-semibold text-white underline transition-colors duration-200 hover:text-[#E2004C]"
+                >
+                  <Instagram className="h-5 w-5" />
+                  {activeMessage.label}
+                </a>
+              </>
+            ) : (
+              activeMessage.content
+            )}
+          </p>
+        </div>
       </div>
 
-      {/* Datum Banner ganz oben - entfernt */}
-      {/* <div className="absolute top-8 bg-[#E2004C] px-8 py-3 rounded-full shadow-lg">
-        <p className="font-bold text-lg md:text-xl">10.05.2026 • 13:00 Uhr</p>
-      </div> */}
-
-      <div className="mt-8">
+      <div className="w-full max-w-5xl flex flex-col items-center gap-6">
         <a
           href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
           target="_blank"
@@ -46,46 +100,25 @@ export function Hero() {
         >
           Jetzt dem Team beitreten! 🏃‍♂️
         </a>
-      </div>
 
-      <div className="absolute bottom-8 flex flex-col items-center">
-        <div className="animate-bounce mb-2">
-          <a>weiter scrollen</a>
-        </div>
-        <div className="animate-bounce flex space-x-2">
-          <svg
-            className="w-8 h-8 text-white"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
-          <svg
-            className="w-8 h-8 text-white"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
-          <svg
-            className="w-8 h-8 text-white"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
+        <div className="flex flex-col items-center gap-3">
+          <span className="text-sm uppercase tracking-[0.4em] text-white/70">Weiter scrollen</span>
+          <div className="flex space-x-2 animate-bounce">
+            {[...Array(3)].map((_, index) => (
+              <svg
+                key={index}
+                className="w-8 h-8 text-white"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            ))}
+          </div>
         </div>
       </div>
     </section>
