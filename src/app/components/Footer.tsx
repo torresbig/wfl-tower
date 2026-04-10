@@ -57,7 +57,7 @@ export function Footer() {
             ></script>
             <noscript>
               <img
-                src="https://www.yogizaehler.de/Besucherzaehler/z_000.php?id=1988926568"
+                src="https://www.yogizaehler.de/Besucherzaehler/z_003.php?id=1988926568&amp;besucher&amp;f1=lime&amp;f2=$DDDDDD&amp;f3=$8B78FE&amp;f4=$5050BB&amp;f5=white"
                 alt="Besucherzähler"
               />
             </noscript>
