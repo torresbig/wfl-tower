@@ -129,7 +129,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-full max-w-5xl flex flex-col items-center gap-6">
+      <div className="w-full max-w-5xl flex flex-col items-center">
         <a
           href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
           target="_blank"
@@ -138,10 +138,11 @@ export function Hero() {
         >
           Jetzt dem Team beitreten! 🏃‍♂️
         </a>
+      </div>
 
-        <div className="flex flex-col items-center gap-3">
-          <span className="text-sm uppercase tracking-[0.4em] text-white/70">Weiter scrollen</span>
-          <div className="flex space-x-2 animate-bounce">
+      <div className="fixed bottom-8 left-0 right-0 flex flex-col items-center gap-3 pointer-events-none">
+        <span className="text-sm uppercase tracking-[0.4em] text-white/70">Weiter scrollen</span>
+        <div className="flex space-x-2 animate-bounce">
             {[...Array(3)].map((_, index) => (
               <svg
                 key={index}
@@ -158,7 +159,6 @@ export function Hero() {
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 }
