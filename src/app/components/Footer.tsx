@@ -53,7 +53,7 @@ export function Footer() {
             <script
               type="text/javascript"
               async
-              src="https://www.yogizaehler.de/Besucherzaehler/z_003.php?id=1988926568&besucher&f1=lime&f2=$DDDDDD&f3=$8B78FE&f4=$5050BB&f5=white"
+              src="https://www.yogizaehler.de/Besucherzaehler/z_003.php?id=1988926568"
             ></script>
             <noscript>
               <img
