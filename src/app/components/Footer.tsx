@@ -1,5 +1,4 @@
 import { Heart, Instagram } from "lucide-react";
-import { VisitorCounter } from "./VisitorCounter";
 
 export function Footer() {
   return (
@@ -49,8 +48,20 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="mt-8 text-sm text-gray-400 space-y-2">
-          <VisitorCounter />
+        <div className="mt-8 text-sm text-gray-400">
+          <div id="YFB_" className="mb-4">
+            <script
+              type="text/javascript"
+              async
+              src="https://www.yogizaehler.de/Besucherzaehler/z_003.php?id=1988926568&besucher&f1=lime&f2=$DDDDDD&f3=$8B78FE&f4=$5050BB&f5=white"
+            ></script>
+            <noscript>
+              <img
+                src="https://www.yogizaehler.de/Besucherzaehler/z_000.php?id=1988926568"
+                alt="Besucherzähler"
+              />
+            </noscript>
+          </div>
           <p>&copy; {new Date().getFullYear()} Tower & Friends · Wings for Life World Run</p>
         </div>
       </div>
