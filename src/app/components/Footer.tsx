@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -23,6 +23,18 @@ export function Footer() {
           <span className="text-gray-300">Made with</span>
           <Heart className="w-5 h-5 text-[#E2004C] fill-current" />
           <span className="text-gray-300">in Simmern (Hunsrück)</span>
+        </div>
+
+        <div className="flex justify-center items-center space-x-6 mb-8">
+          <a
+            href="https://www.instagram.com/thomas_sborn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-white hover:text-[#E2004C] transition-colors duration-200"
+          >
+            <Instagram className="w-6 h-6" />
+            <span className="font-semibold">@thomas_sborn</span>
+          </a>
         </div>
 
         <div className="border-t border-white/20 pt-8">

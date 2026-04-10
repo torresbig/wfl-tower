@@ -1,4 +1,4 @@
-import { Heart, Globe, Clock, Smartphone, Target, TrendingUp } from "lucide-react";
+import { Heart, Globe, Clock, Smartphone, Target, TrendingUp, DollarSign } from "lucide-react";
 
 const facts = [
   {
@@ -30,6 +30,11 @@ const facts = [
     icon: TrendingUp,
     title: "Unser Impact 2025",
     description: "55 aktive Läufer (über 100 Mitglieder) und über 3.000 € Spenden - gemeinsam sind wir stark!",
+  },
+  {
+    icon: DollarSign,
+    title: "Spenden statt Laufen?",
+    description: "Du kannst nicht laufen? Kein Problem! Unterstütze uns finanziell. Kontaktiere uns per Email: wfl_tower@t-online.de oder auf Instagram @thomas_sborn",
   },
   {
     icon: Target,
