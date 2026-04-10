@@ -14,7 +14,7 @@ const rotatingMessages = [
   },
   {
     id: 3,
-    content: "Laufen für die, die es nicht können",
+    content: "Gemeinsam Laufen, Gehen oder Rollen für die, die es nicht können",
   },
   {
     id: 4,
@@ -27,6 +27,18 @@ const rotatingMessages = [
   {
     id: 6,
     content: "100% der Startgebühr und Spenden gehen in die Forschung.",
+  },
+  {
+    id: 7,
+    content: "Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am 10. Mai 2026. In anderen Zeitzonen entsprechend früher oder später.",
+  },
+  {
+    id: 8,
+    content: "Du möchtest oder kannst nicht Laufen? Dann spende gerne eine kleine Summe. Dafür gerne eine Email an ",
+    email: "wfl_tower@t-online.de",
+    instagramText: " oder über Instagram an ",
+    instagramLink: "https://www.instagram.com/thomas_sborn/",
+    instagramLabel: "@thomas_sborn",
   },
 ];
 
@@ -72,7 +84,33 @@ export function Hero() {
 
         <div className="mx-auto mb-8 max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-sm transition-all duration-700">
           <p className="text-base sm:text-lg md:text-xl leading-8 text-white/90">
-            {activeMessage.link ? (
+            {activeMessage.email || activeMessage.instagramLink ? (
+              <>
+                {activeMessage.content}
+                {activeMessage.email && (
+                  <a
+                    href={`mailto:${activeMessage.email}`}
+                    className="font-semibold text-white underline transition-colors duration-200 hover:text-[#E2004C]"
+                  >
+                    {activeMessage.email}
+                  </a>
+                )}
+                {activeMessage.instagramLink && (
+                  <>
+                    {activeMessage.instagramText}
+                    <a
+                      href={activeMessage.instagramLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-semibold text-white underline transition-colors duration-200 hover:text-[#E2004C]"
+                    >
+                      <Instagram className="h-5 w-5" />
+                      {activeMessage.instagramLabel}
+                    </a>
+                  </>
+                )}
+              </>
+            ) : activeMessage.link ? (
               <>
                 {activeMessage.content} <a
                   href={activeMessage.link}
