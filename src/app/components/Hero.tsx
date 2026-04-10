@@ -140,7 +140,7 @@ export function Hero() {
         </a>
       </div>
 
-      <div className="fixed bottom-8 left-0 right-0 flex flex-col items-center gap-3 pointer-events-none">
+      <div className="flex flex-col items-center gap-3 pb-8">
         <span className="text-sm uppercase tracking-[0.4em] text-white/70">Weiter scrollen</span>
         <div className="flex space-x-2 animate-bounce">
             {[...Array(3)].map((_, index) => (
