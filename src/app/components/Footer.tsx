@@ -5,7 +5,7 @@ export function Footer() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://www.yogizaehler.de/Besucherzaehler/pz_018_2.php?id=1988926568&design=886000003";
-    script.async = true;
+    script.async = false;
     const container = document.getElementById("YFB_");
     if (container) {
       container.appendChild(script);
