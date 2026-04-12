@@ -49,7 +49,9 @@ export function Footer() {
         </div>
 
         <div className="mt-8 text-sm text-gray-400">
-          <script src="https://www.yogizaehler.de/Besucherzaehler/pz_018_2.php?id=1988926568&design=886000003"></script>
+          <div id="YFB_"><script type="text/javascript" async src="https://www.yogizaehler.de/Besucherzaehler/z_003.php?id=1988926568besucher&f1=lime&f2=$DDDDDD&f3=$8B78FE&f4=$5050BB&f5=white"></script></div>
+          <noscript><img src="https://www.yogizaehler.de/Besucherzaehler/z_000.php?id=1988926568 alt="">
+          </noscript>
           <p>&copy; {new Date().getFullYear()} Tower & Friends · Wings for Life World Run</p>
         </div>
       </div>
