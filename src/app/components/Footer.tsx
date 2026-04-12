@@ -11,9 +11,9 @@ export function Footer() {
             className="h-16 mx-auto mb-6 opacity-80"
           />
         </div>
-        
+
         <h3 className="text-2xl font-bold mb-4">Tower & Friends</h3>
-        
+
         <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
           Gemeinsam laufen wir für eine Welt ohne Querschnittlähmung.
           100% der Spenden und Startgelder fließen in die Forschung.
@@ -49,9 +49,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 text-sm text-gray-400">
-          <div id="YFB_" style={{ marginBottom: '16px' }}></div>
-          <script async src="https://www.yogizaehler.de/Besucherzaehler/pz_018_2.php?id=1988926568&design=886000003"></script>
-          <p>&copy; {new Date().getFullYear()} Tower & Friends · Wings for Life World Run</p>
+          <div id="YFB_"><script type="text/javascript" async src="https://www.yogizaehler.de/Besucherzaehler/z_003.php?id=1988926568"></script></div><noscript><img src="https://www.yogizaehler.de/Besucherzaehler/z_000.php?id=1988926568" alt=""></noscript>
         </div>
       </div>
     </footer>
