@@ -1,0 +1,9 @@
+name: Example Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: "UGREEN Qwen"
+    provider: openai
+    model: "qwen2.5-coder:7b"
+    apiBase: "http://192.168.2.116:11434/v1"
