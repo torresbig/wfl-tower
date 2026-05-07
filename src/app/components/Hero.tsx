@@ -4,7 +4,7 @@ import { Instagram } from "lucide-react";
 const rotatingMessages = [
   {
     id: 1,
-    content: "APPRUN:<br>Jeder kann von überall auf der Welt teilnehmen. Man muss nicht vor Ort sein.",
+    content: "APPRUN: Jeder kann von überall auf der Welt teilnehmen. Man muss nicht vor Ort sein.",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const rotatingMessages = [
   },
   {
     id: 9,
-    content: "Gib mir ein Motivationsschub! <br>Spende pro Kilometer um mich fertig zu machen. ",
+    content: "Gib mir ein Motivationsschub! Spende pro Kilometer um mich fertig zu machen. ",
     link: "https://www.wingsforlifeworldrun.com/de/overlays/users/97zmMP/donate/perkm",
     label: "<< Hier spenden >>",
   },
