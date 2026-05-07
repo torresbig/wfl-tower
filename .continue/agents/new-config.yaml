@@ -3,7 +3,11 @@ version: 1.0.0
 schema: v1
 
 models:
-  - name: "UGREEN Qwen"
+  - name: "UGREEN Qwen (Schnell)"
+    provider: openai
+    model: "qwen2.5-coder:1.5b"
+    apiBase: "http://192.168.2.116:11434/v1"
+  - name: "local Qwen (Schlau)"
     provider: openai
     model: "qwen2.5-coder:7b"
-    apiBase: "http://192.168.2.116:11434/v1"
+    apiBase: "http://localhost:11434/v1"

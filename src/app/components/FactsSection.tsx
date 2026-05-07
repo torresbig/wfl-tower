@@ -58,7 +58,7 @@ const facts: Fact[] = [
   {
     icon: Target,
     title: "privates Event",
-    content: "Jeder Teilnehmer nimmt auf eigene Gefahr am \" Wings for Life World Run\" teil. Unser Team trifft sich nur, um privat zusammen zu laufen und Spaß zu haben. Dies ist kein offizielles Event!",
+    content: "Jeder Teilnehmer nimmt auf eigene Gefahr am \"Wings for Life World Run\" teil. Unser Team trifft sich nur, um privat zusammen zu laufen und Spaß zu haben. Dies ist kein offizielles Event!",
   },
 ];
 
