@@ -4,11 +4,11 @@ import { Instagram } from "lucide-react";
 const rotatingMessages = [
   {
     id: 1,
-    content: "Apprun: Jeder kann von überall auf der Welt teilnehmen. Man muss nicht vor Ort sein.",
+    content: "APPRUN:<br>Jeder kann von überall auf der Welt teilnehmen. Man muss nicht vor Ort sein.",
   },
   {
     id: 2,
-    content: "Mehr Einblicke und Infos auf Instagram",
+    content: "Mehr Einblicke und Infos auf Instagram ",
     instagramLink: "https://www.instagram.com/thomas_sborn/",
     instagramLabel: "@thomas_sborn",
   },
@@ -31,7 +31,7 @@ const rotatingMessages = [
   {
     id: 7,
     content: "Du möchtest oder kannst nicht Laufen? Dann spende gerne eine kleine Summe. Dafür gerne eine Email an ",
-    email: "wfl_tower@t-online.de",
+    email: "wfl_tower@t-online.de ",
     instagramText: " oder über Instagram an ",
     instagramLink: "https://www.instagram.com/thomas_sborn/",
     instagramLabel: "@thomas_sborn",
@@ -42,7 +42,7 @@ const rotatingMessages = [
   },
   {
     id: 9,
-    content: "Gib mir ein Motivationsschub! Spende pro Kilometer um mich fertig zu machen.",
+    content: "Gib mir ein Motivationsschub! <br>Spende pro Kilometer um mich fertig zu machen. ",
     link: "https://www.wingsforlifeworldrun.com/de/overlays/users/97zmMP/donate/perkm",
     label: "<< Hier spenden >>",
   },
