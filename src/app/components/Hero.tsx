@@ -9,8 +9,8 @@ const rotatingMessages = [
   {
     id: 2,
     content: "Mehr Einblicke und Infos auf Instagram",
-    link: "https://www.instagram.com/thomas_sborn/",
-    label: "@thomas_sborn",
+    instagramLink: "https://www.instagram.com/thomas_sborn/",
+    instagramLabel: "@thomas_sborn",
   },
   {
     id: 3,
@@ -22,18 +22,14 @@ const rotatingMessages = [
   },
   {
     id: 5,
-    content: "Tu was Gutes und sei dabei.",
-  },
-  {
-    id: 6,
     content: "100% der Startgebühr und Spenden gehen in die Forschung.",
   },
   {
-    id: 7,
+    id: 6,
     content: "Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am 10. Mai 2026. In anderen Zeitzonen entsprechend früher oder später.",
   },
   {
-    id: 8,
+    id: 7,
     content: "Du möchtest oder kannst nicht Laufen? Dann spende gerne eine kleine Summe. Dafür gerne eine Email an ",
     email: "wfl_tower@t-online.de",
     instagramText: " oder über Instagram an ",
@@ -41,11 +37,11 @@ const rotatingMessages = [
     instagramLabel: "@thomas_sborn",
   },
   {
-    id: 9,
+    id: 8,
     content: "der gemeinsame Lauf in Simmern ist ein privates Event, bei dem jeder auf eigene Verantwortung am World Run teilnimmt",
   },
   {
-    id: 10,
+    id: 9,
     content: "Gib mir ein Motivationsschub! Spende pro Kilometer um mich fertig zu machen.",
     link: "https://www.wingsforlifeworldrun.com/de/overlays/users/97zmMP/donate/perkm",
     label: "<< Hier spenden >>",
@@ -164,7 +160,7 @@ export function Hero() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 font-semibold text-white underline transition-colors duration-200 hover:text-[#E2004C] ml-1"
                   >
-                    <Instagram className="h-5 w-5" />
+                    
                     {activeMessage.label}
                   </a>
                 </>
