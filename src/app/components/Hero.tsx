@@ -44,6 +44,12 @@ const rotatingMessages = [
     id: 9,
     content: "der gemeinsame Lauf in Simmern ist ein privates Event, bei dem jeder auf eigene Verantwortung am World Run teilnimmt",
   },
+  {
+    id: 10,
+    content: "Gib mir ein Motivationsschub! Spende pro Kilometer um mich fertig zu machen.",
+    link: "https://www.wingsforlifeworldrun.com/de/overlays/users/97zmMP/donate/perkm",
+    label: "<< Hier spenden >>",
+  },
 ];
 
 // Hilfsfunktion zum Mischen der Reihenfolge (Fisher-Yates Shuffle)
