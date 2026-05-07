@@ -181,25 +181,25 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-3 mt-16">
-        <span className="text-sm uppercase tracking-[0.4em] text-white/70">Weiter scrollen</span>
-        <div className="flex space-x-2 animate-bounce">
-            {[...Array(3)].map((_, index) => (
-              <svg
-                key={index}
-                className="w-8 h-8 text-white"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            ))}
-          </div>
-        </div>
+      <div className="flex flex-col items-center mt-16">
+  <span className="text-sm uppercase tracking-[0.4em] text-white/70">Weiter scrollen</span>
+  <div className="flex space-x-2 animate-bOUNCE" style={{ marginTop: '8px', height: '5rem' }}>
+    {[...Array(3)].map((_, index) => (
+      <svg
+        key={index}
+        className="w-8 h-8 text-white"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    ))}
+  </div>
+</div>
     </section>
   );
 }
