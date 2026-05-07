@@ -14,7 +14,7 @@ const rotatingMessages = [
   },
   {
     id: 3,
-    content: "Gemeinsam Laufen, Gehen oder Rollen für die, die es nicht können",
+    content: "Gemeinsam laufen, rollen oder gehen für die, die es nicht können",
   },
   {
     id: 4,
