@@ -68,7 +68,7 @@ export function Hero() {
 
   // Initialisierung: Tage berechnen und erste zufällige Reihenfolge festlegen
   useEffect(() => {
-    const targetDate = new Date("2026-05-10");
+    const targetDate = new Date("2027-05-09");
     const today = new Date();
     const diffTime = targetDate.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
