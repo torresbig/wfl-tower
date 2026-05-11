@@ -26,7 +26,7 @@ const rotatingMessages = [
   },
   {
     id: 6,
-    content: "Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am 10. Mai 2026. In anderen Zeitzonen entsprechend früher oder später.",
+    content: "Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am 09. Mai 2027. In anderen Zeitzonen entsprechend früher oder später.",
   },
   {
     id: 7,
