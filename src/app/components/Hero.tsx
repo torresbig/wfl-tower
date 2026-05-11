@@ -118,7 +118,7 @@ export function Hero() {
           </div>
 
           <div className="mb-4">
-            <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">10.05.2026 • 13:00 Uhr</p>
+            <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">09.05.2027 • 13:00 Uhr</p>
             <p className="text-base md:text-lg text-white/90">{daysUntilStart} Tage bis zum Start!</p>
           </div>
 
