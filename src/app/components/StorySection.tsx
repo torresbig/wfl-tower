@@ -30,7 +30,7 @@ export function StorySection() {
             </div>
             <div className="bg-[#E2004C]/10 border-l-4 border-[#E2004C] p-6 my-8">
               <p className="text-lg font-semibold text-gray-900">
-                2026: 67 aktive Läufer · Über 3.100 € Spenden · 100% für die Forschung
+                2026: 67 aktive Läufer · Über 3.300 € Spenden · 100% für die Forschung
               </p>
             </div>
 
