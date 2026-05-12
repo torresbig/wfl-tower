@@ -38,8 +38,8 @@ const facts: Fact[] = [
   },
   {
     icon: TrendingUp,
-    title: "Unser Team Impact 2026",
-    content: "Team Tower & Friends hatte 2026 unglaubliche 67 aktive Läufer (12 mehr als 2025) und über 3.100 € Spenden gesammelt!",
+    title: "unser Team Impact 2026",
+    content: "Team Tower & Friends hatte 2026 unglaubliche 67 aktive Läufer (12 mehr als 2025) und über 3.300 € Spenden gesammelt!",
   },
   {
     icon: TrendingUp,
