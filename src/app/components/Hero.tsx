@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { Instagram } from "lucide-react";
 
 const rotatingMessages = [
@@ -40,12 +40,13 @@ const rotatingMessages = [
     id: 8,
     content: "der gemeinsame Lauf in Simmern ist ein privates Event, bei dem jeder auf eigene Verantwortung am World Run teilnimmt",
   },
-  {
+ /* {
     id: 9,
     content: "Gib mir ein Motivationsschub! Spende pro Kilometer um mich fertig zu machen. ",
     link: "https://www.wingsforlifeworldrun.com/de/overlays/users/97zmMP/donate/perkm",
     label: "<< Hier spenden >>",
   },
+  */
 ];
 
 // Hilfsfunktion zum Mischen der Reihenfolge (Fisher-Yates Shuffle)
@@ -57,6 +58,8 @@ const shuffleArray = (array: number[]) => {
   }
   return shuffled;
 };
+
+const targetDate = new Date("2027-05-09T13:00:00");
 
 export function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -71,10 +74,14 @@ export function Hero() {
   // Und an welcher Stelle in dieser Reihenfolge wir gerade sind
   const [currentIndexInOrder, setCurrentIndexInOrder] = useState(0);
 
+  const formattedTargetDate = `${String(targetDate.getDate()).padStart(2, "0")}.${String(
+    targetDate.getMonth() + 1
+  ).padStart(2, "0")}.${targetDate.getFullYear()} • ${String(targetDate.getHours()).padStart(2, "0")}:${String(
+    targetDate.getMinutes()
+  ).padStart(2, "0")} Uhr`;
+
   // Initialisierung: Countdown-Timer und erste zufällige Reihenfolge festlegen
   useEffect(() => {
-    const targetDate = new Date("2027-05-09T13:00:00");
-
     const updateCountdown = () => {
       const now = new Date();
       const diffTime = targetDate.getTime() - now.getTime();
@@ -137,9 +144,9 @@ export function Hero() {
           </div>
 
           <div className="mb-4">
-            <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">10.05.2026 • 13:00 Uhr</p>
+            <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">{formattedTargetDate}</p>
             <p className="text-base md:text-lg text-white/90">
-              {timeLeft.days} Tage - {String(timeLeft.hours).padStart(2, "0")}:{String(timeLeft.minutes).padStart(2, "0")}:{String(timeLeft.seconds).padStart(2, "0")}
+              {timeLeft.days} Tage - {String(timeLeft.hours).padStart(2, "0")}:{String(timeLeft.minutes).padStart(2, "0")}:{String(timeLeft.seconds).padStart(2, "0") bis zum Start}
             </p>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Tower & Friends</h1>
