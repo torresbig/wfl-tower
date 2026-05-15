@@ -1,23 +1,8 @@
-import { useState } from "react";
-import { Heart, Globe, Clock, Smartphone, Target, TrendingUp } from "lucide-react";
-
 export function InfoAccordion() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <section className="py-10 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="w-full text-left text-2xl md:text-3xl font-bold text-red-600 hover:text-red-800 transition-colors duration-200 flex items-center justify-between p-4 bg-white rounded-lg shadow-md border border-red-200"
-        >
-         <Target /> Klick für mehr Infos zum World Run
-          <span className={`transform transition-transform duration-200 text-3xl ${isOpen ? 'rotate-180' : ''}`}>
-            ▼
-          </span>
-        </button>
-        {isOpen && (
-          <div className="mt-6 space-y-6">
+        <div className="mt-6 space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
               <h3 className="text-xl font-semibold text-red-600 mb-2 flex items-center">
                 🏃‍♂️ Was ist der Wings for Life World Run?
@@ -91,7 +76,6 @@ export function InfoAccordion() {
               </div>
             </div>
           </div>
-        )}
       </div>
     </section>
   );
