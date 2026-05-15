@@ -50,7 +50,7 @@ export function InfoAccordion() {
                 <div>
                   <strong>Start</strong><br />
                   <ul className="text-gray-800 leading-relaxed list-disc list-inside ml-4">
-                    <li>Weltweiter Start zur gleichen Uhrzeit (Deutschland 10.05. 13 Uhr).</li>
+                    <li>Weltweiter Start zur gleichen Uhrzeit (Deutschland 13 Uhr).</li>
                     <li>Du läufst, gehst oder rollst in deinem eigenen Tempo.</li>
                   </ul>
                 </div>
