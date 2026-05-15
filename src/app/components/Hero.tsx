@@ -60,6 +60,7 @@ const shuffleArray = (array: number[]) => {
 };
 
 const targetDate = new Date("2027-05-09T13:00:00");
+const regDate = new Date("2026-11-04T11:00:00");
 
 export function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -74,11 +75,15 @@ export function Hero() {
   // Und an welcher Stelle in dieser Reihenfolge wir gerade sind
   const [currentIndexInOrder, setCurrentIndexInOrder] = useState(0);
 
+  const registrationOpen = new Date() >= regDate;
   const formattedTargetDate = `${String(targetDate.getDate()).padStart(2, "0")}.${String(
     targetDate.getMonth() + 1
   ).padStart(2, "0")}.${targetDate.getFullYear()} • ${String(targetDate.getHours()).padStart(2, "0")}:${String(
     targetDate.getMinutes()
   ).padStart(2, "0")} Uhr`;
+  const formattedRegDate = `${String(regDate.getDate()).padStart(2, "0")}.${String(
+    regDate.getMonth() + 1
+  ).padStart(2, "0")}.${regDate.getFullYear()}`;
 
   // Initialisierung: Countdown-Timer und erste zufällige Reihenfolge festlegen
   useEffect(() => {
@@ -199,14 +204,30 @@ export function Hero() {
         </div>
 
         <div className="w-full max-w-5xl flex flex-col items-center">
-          <a
-            href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#E2004C] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#C20041] transition-all hover:scale-105 shadow-2xl"
-          >
-            Jetzt dem Team beitreten! 🏃‍♂️
-          </a>
+          {!registrationOpen && (
+            <p className="mb-4 text-sm text-white/70">
+              Anmeldung ab dem {formattedRegDate} geöffnet
+            </p>
+          )}
+
+          {registrationOpen ? (
+            <a
+              href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#E2004C] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#C20041] transition-all hover:scale-105 shadow-2xl"
+            >
+              Jetzt dem Team beitreten! 🏃‍♂️
+            </a>
+          ) : (
+            <button
+              type="button"
+              disabled
+              className="inline-block bg-gray-500 text-white px-8 py-4 rounded-full text-lg font-bold cursor-not-allowed shadow-md opacity-80"
+            >
+              Jetzt dem Team beitreten! 🏃‍♂️
+            </button>
+          )}
         </div>
       </div>
 
