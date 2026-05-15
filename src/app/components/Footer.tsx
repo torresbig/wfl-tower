@@ -1,7 +1,10 @@
 import { Heart, Instagram } from "lucide-react";
-import { teamJoinUrl } from "../constants";
+import { teamJoinUrl, registrationDate, formatDateShort } from "../constants";
 
 export function Footer() {
+  const registrationOpen = new Date() >= registrationDate;
+  const formattedRegDate = formatDateShort(registrationDate);
+
   return (
     <footer className="bg-[#003056] text-white py-12 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -39,14 +42,20 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/20 pt-8">
-          <a
-            href={teamJoinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#E2004C] hover:text-[#C20041] font-semibold transition-colors"
-          >
-            → Jetzt dem Team beitreten
-          </a>
+          {registrationOpen ? (
+            <a
+              href={teamJoinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#E2004C] hover:text-[#C20041] font-semibold transition-colors"
+            >
+              → Jetzt dem Team beitreten
+            </a>
+          ) : (
+            <p className="text-gray-400 font-semibold">
+              Anmeldung ab dem {formattedRegDate} geöffnet
+            </p>
+          )}
         </div>
 
         <div className="mt-8 text-sm text-gray-400">
