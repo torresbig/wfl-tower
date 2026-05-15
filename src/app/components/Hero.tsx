@@ -59,24 +59,43 @@ const shuffleArray = (array: number[]) => {
 };
 
 export function Hero() {
-  const [daysUntilStart, setDaysUntilStart] = useState(0);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
   
   // Wir speichern die aktuelle Reihenfolge der Indizes
   const [order, setOrder] = useState<number[]>([]);
   // Und an welcher Stelle in dieser Reihenfolge wir gerade sind
   const [currentIndexInOrder, setCurrentIndexInOrder] = useState(0);
 
-  // Initialisierung: Tage berechnen und erste zufällige Reihenfolge festlegen
+  // Initialisierung: Countdown-Timer und erste zufällige Reihenfolge festlegen
   useEffect(() => {
-    const targetDate = new Date("2026-05-10");
-    const today = new Date();
-    const diffTime = targetDate.getTime() - today.getTime();
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    setDaysUntilStart(diffDays);
+    const targetDate = new Date("2026-05-10T13:00:00");
+
+    const updateCountdown = () => {
+      const now = new Date();
+      const diffTime = targetDate.getTime() - now.getTime();
+      const clampedTime = Math.max(0, diffTime);
+
+      const days = Math.floor(clampedTime / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((clampedTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((clampedTime % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((clampedTime % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+
+    updateCountdown();
+    const countdownInterval = setInterval(updateCountdown, 1000);
 
     // Erstellt ein Array [0, 1, 2, ... 8] und mischt es
     const initialIndices = Array.from(rotatingMessages.keys());
     setOrder(shuffleArray(initialIndices));
+
+    return () => clearInterval(countdownInterval);
   }, []);
 
   // Intervall-Logik
@@ -119,9 +138,9 @@ export function Hero() {
 
           <div className="mb-4">
             <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">10.05.2026 • 13:00 Uhr</p>
-            <p className="text-base md:text-lg text-white/90">{daysUntilStart} Tage bis zum Start!</p>
-          </div>
-
+              <p className="text-base md:text-lg text-white/90">
+                {timeLeft.days} Tage - {String(timeLeft.hours).padStart(2, "0")}:{String(timeLeft.minutes).padStart(2, "0")}:{String(timeLeft.seconds).padStart(2, "0")}
+              </p>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Tower & Friends</h1>
 
           <div className="mx-auto mb-8 max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-sm transition-all duration-700">
