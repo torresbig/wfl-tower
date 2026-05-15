@@ -26,7 +26,7 @@ const rotatingMessages = [
   },
   {
     id: 6,
-    content: "Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am 10. Mai 2026. In anderen Zeitzonen entsprechend früher oder später.",
+    content: "Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am 09. Mai 2027. In anderen Zeitzonen entsprechend früher oder später.",
   },
   {
     id: 7,
@@ -73,7 +73,7 @@ export function Hero() {
 
   // Initialisierung: Countdown-Timer und erste zufällige Reihenfolge festlegen
   useEffect(() => {
-    const targetDate = new Date("2026-05-10T13:00:00");
+    const targetDate = new Date("2027-05-09T13:00:00");
 
     const updateCountdown = () => {
       const now = new Date();

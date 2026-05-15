@@ -28,6 +28,11 @@ export function StorySection() {
                 2025: 55 aktive Läufer · Über 3.000 € Spenden · 100% für die Forschung
               </p>
             </div>
+            <div className="bg-[#E2004C]/10 border-l-4 border-[#E2004C] p-6 my-8">
+              <p className="text-lg font-semibold text-gray-900">
+                2026: 67 aktive Läufer · Über 3.300 € Spenden · 100% für die Forschung
+              </p>
+            </div>
 
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
               Jeder gespendete Euro fließt direkt in die <strong>Forschung zur Heilung von Querschnittlähmung</strong>. 
