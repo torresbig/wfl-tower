@@ -46,50 +46,7 @@ const rotatingMessages = [
     link: "https://www.wingsforlifeworldrun.com/de/overlays/users/97zmMP/donate/perkm",
     label: "<< Hier spenden >>",
   },
-  */// ... existing code ...
-
-const regDate = new Date("2026-11-04T11:00:00");
-const [isActiveRegistration, setIsActiveRegistration] = useState(false);
-
-useEffect(() => {
-  const now = new Date();
-  setIsActiveRegistration(now >= regDate);
-}, [regDate]);
-
-// ... existing code ...
-
-return (
-  <section className="min-h-screen flex flex-col items-center justify-between bg-gradient-to-b from-[#003056] to-[#002040] text-white px-4 pt-16 pb-12">
-    // ... existing code ...
-
-    {isActiveRegistration ? (
-      <div className="w-full max-w-5xl flex flex-col items-center">
-        <a
-          href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-[#E2004C] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#C20041] transition-all hover:scale-105 shadow-2xl"
-        >
-          Jetzt dem Team beitreten! 🏃‍♂️
-        </a>
-      </div>
-    ) : (
-      <div className="w-full max-w-5xl flex flex-col items-center mt-8">
-        <p className="text-base md:text-lg text-white/90 mb-4">Anmeldung ab dem {regDate.toLocaleDateString()} geöffnet</p>
-        <button
-          className="inline-block bg-gray-300 text-white px-8 py-4 rounded-full text-lg font-bold cursor-not-allowed shadow-md"
-          disabled
-        >
-          Jetzt dem Team beitreten! 🏃‍♂️
-        </button>
-      </div>
-    )}
-
-    // ... existing code ...
-  </section>
-);
-
-// ... existing code ...
+  */
 ];
 
 // Hilfsfunktion zum Mischen der Reihenfolge (Fisher-Yates Shuffle)

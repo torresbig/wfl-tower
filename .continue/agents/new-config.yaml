@@ -2,8 +2,24 @@ name: Example Config
 version: 1.0.0
 schema: v1
 
-models:
-  - name: "local Qwen (Schlau)"
-    provider: openai
-    model: "qwen2.5-coder:14b-instruct-q3_K_M"
-    apiBase: "http://localhost:11434/v1"  # <--- Das /v1 ist entscheidend!
+{
+  "models": [
+    {
+      "title": "Qwen 14B (GPU-Force)",
+      "provider": "ollama",
+      "model": "qwen2.5-coder:14b-instruct-q3_K_M",
+      "requestOptions": {
+        "num_ctx": 4096,
+        "num_gpu": 99
+      }
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Qwen 7B (Fast)",
+    "provider": "ollama",
+    "model": "qwen2.5-coder:7b",
+    "requestOptions": {
+      "num_ctx": 2048
+    }
+  }
+}
