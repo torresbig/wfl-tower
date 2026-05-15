@@ -146,7 +146,7 @@ export function Hero() {
           <div className="mb-4">
             <p className="text-2xl md:text-3xl font-bold text-[#E2004C] mb-2">{formattedTargetDate}</p>
             <p className="text-base md:text-lg text-white/90">
-              {timeLeft.days} Tage - {String(timeLeft.hours).padStart(2, "0")}:{String(timeLeft.minutes).padStart(2, "0")}:{String(timeLeft.seconds).padStart(2, "0") bis zum Start}
+              {timeLeft.days} Tage - {String(timeLeft.hours).padStart(2, "0")}:{String(timeLeft.minutes).padStart(2, "0")}:{String(timeLeft.seconds).padStart(2, "0")} bis zum Start
             </p>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Tower & Friends</h1>
