@@ -1,4 +1,5 @@
 import { ArrowRight, Users } from "lucide-react";
+import { teamJoinUrl } from "../constants";
 
 interface CTASectionProps {
   variant?: "primary" | "secondary";
@@ -19,7 +20,7 @@ export function CTASection({ variant = "primary" }: CTASectionProps) {
               <br />Jeder Schritt zählt. Jeder Meter macht den Unterschied.
             </p>
             <a
-              href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
+              href={teamJoinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-[#E2004C] text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-[#C20041] transition-all hover:scale-105 shadow-2xl"
@@ -41,7 +42,7 @@ export function CTASection({ variant = "primary" }: CTASectionProps) {
             Lass uns gemeinsam Geschichte schreiben! 🏃‍♂️💪
           </p>
           <a
-            href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
+            href={teamJoinUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-[#E2004C] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#C20041] transition-all hover:scale-105 shadow-lg"

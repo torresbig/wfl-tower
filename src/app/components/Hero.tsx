@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Instagram } from "lucide-react";
+import { teamJoinUrl, registrationDate, raceDate, formatDateShort, formatDateTimeShort, formatDateLong } from "../constants";
 
 const rotatingMessages = [
   {
@@ -26,7 +27,7 @@ const rotatingMessages = [
   },
   {
     id: 6,
-    content: "Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am 09. Mai 2027. In anderen Zeitzonen entsprechend früher oder später.",
+    content: `Weltweit laufen Tausende Menschen gleichzeitig los. In Deutschland um 13 Uhr am ${formatDateLong(raceDate)}. In anderen Zeitzonen entsprechend früher oder später.`,
   },
   {
     id: 7,
@@ -59,8 +60,7 @@ const shuffleArray = (array: number[]) => {
   return shuffled;
 };
 
-const targetDate = new Date("2027-05-09T13:00:00");
-const regDate = new Date("2026-11-04T11:00:00");
+const formattedTargetDate = formatDateTimeShort(raceDate);
 
 export function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -75,21 +75,14 @@ export function Hero() {
   // Und an welcher Stelle in dieser Reihenfolge wir gerade sind
   const [currentIndexInOrder, setCurrentIndexInOrder] = useState(0);
 
-  const registrationOpen = new Date() >= regDate;
-  const formattedTargetDate = `${String(targetDate.getDate()).padStart(2, "0")}.${String(
-    targetDate.getMonth() + 1
-  ).padStart(2, "0")}.${targetDate.getFullYear()} • ${String(targetDate.getHours()).padStart(2, "0")}:${String(
-    targetDate.getMinutes()
-  ).padStart(2, "0")} Uhr`;
-  const formattedRegDate = `${String(regDate.getDate()).padStart(2, "0")}.${String(
-    regDate.getMonth() + 1
-  ).padStart(2, "0")}.${regDate.getFullYear()}`;
+  const registrationOpen = new Date() >= registrationDate;
+  const formattedRegDate = formatDateShort(registrationDate);
 
   // Initialisierung: Countdown-Timer und erste zufällige Reihenfolge festlegen
   useEffect(() => {
     const updateCountdown = () => {
       const now = new Date();
-      const diffTime = targetDate.getTime() - now.getTime();
+      const diffTime = raceDate.getTime() - now.getTime();
       const clampedTime = Math.max(0, diffTime);
 
       const days = Math.floor(clampedTime / (1000 * 60 * 60 * 24));
@@ -212,7 +205,7 @@ export function Hero() {
 
           {registrationOpen ? (
             <a
-              href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
+              href={teamJoinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#E2004C] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#C20041] transition-all hover:scale-105 shadow-2xl"

@@ -1,4 +1,5 @@
 import { Heart, Instagram } from "lucide-react";
+import { teamJoinUrl } from "../constants";
 
 export function Footer() {
   return (
@@ -39,7 +40,7 @@ export function Footer() {
 
         <div className="border-t border-white/20 pt-8">
           <a
-            href="https://www.wingsforlifeworldrun.com/de/teams/5dpLP5?join=1"
+            href={teamJoinUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#E2004C] hover:text-[#C20041] font-semibold transition-colors"
